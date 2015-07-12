@@ -34,7 +34,7 @@ param_fn = model_path + 'places.caffemodel'
 #net_fn   = model_path + 'train_val.prototxt'
 #param_fn = model_path + 'nin_imagenet_conv.caffemodel'
 
-img = np.float32(PIL.Image.open('monet_flowers.jpg'))
+img = np.float32(PIL.Image.open('MLK.jpg'))
 JITTER = 32 # defaults 32
 
 def showarray(a, fmt='jpeg'):
@@ -124,7 +124,7 @@ def deepdream(net, base_img, iter_n=10, octave_n=4, octave_scale=1.4, end='incep
 showarray(img)
 
 # run once
-_=deepdream(net, img, end='inception_4a/3x3', iter_n=10, octave_n=1)# end='inception_4a/output')
+_=deepdream(net, img, end='inception_3a/3x3_reduce', iter_n=20, octave_n=4)# end='inception_4a/output')
 #_=deepdream(net, img, end='pool5', iter_n=10, octave_n=5)# end='inception_4a/output')
 
 """ places net.blobs.keys()
@@ -156,7 +156,7 @@ _=deepdream(net, img, end='inception_4a/3x3', iter_n=10, octave_n=1)# end='incep
  'inception_3b/3x3_reduce',
  'inception_3b/3x3', splotches everywhere
  'inception_3b/5x5_reduce',
- 'inception_3b/5x5', very cool swirly cuniform dreads
+ 'inception_3b/5x5', very cool swirly cuniform dreads. wedding foto
  'inception_3b/pool',
  'inception_3b/pool_proj',
  'inception_3b/output',
@@ -268,6 +268,7 @@ EVERYTHING IS UGLY
 """
 Output of net.blobs.keys()
 general purpose
+http://people.mokk.bme.hu/~daniel/deepdream/
 
 'data',
  'conv1/7x7_s2',
@@ -288,7 +289,7 @@ general purpose
  'inception_3a/5x5', # discoloring all over, "dreads"
  'inception_3a/pool',
  'inception_3a/pool_proj',
- 'inception_3a/output',
+ 'inception_3a/output', swirls, lines, and black eyeballs http://i.imgur.com/c7oSqOK.gifv
  'inception_3a/output_inception_3a/output_0_split_0',
  'inception_3a/output_inception_3a/output_0_split_1',
  'inception_3a/output_inception_3a/output_0_split_2',
@@ -299,8 +300,8 @@ general purpose
  'inception_3b/5x5_reduce',
  'inception_3b/5x5', boxes cuniforn stuff in tiles
  'inception_3b/pool',
- 'inception_3b/pool_proj',
- 'inception_3b/output',
+ 'inception_3b/pool_proj', sweet zebra example http://i.imgur.com/zDt3icD.jpg
+ 'inception_3b/output', round muted multi-colored dots http://i.imgur.com/ypI8QDk.gifv
  'pool3/3x3_s2',
  'pool3/3x3_s2_pool3/3x3_s2_0_split_0',
  'pool3/3x3_s2_pool3/3x3_s2_0_split_1',
@@ -313,7 +314,7 @@ general purpose
  'inception_4a/5x5',
  'inception_4a/pool',
  'inception_4a/pool_proj',
- 'inception_4a/output',
+ 'inception_4a/output', many eyes, hints of face texture and fur http://i.imgur.com/XQ0TWUO.gifv
  'inception_4a/output_inception_4a/output_0_split_0',
  'inception_4a/output_inception_4a/output_0_split_1',
  'inception_4a/output_inception_4a/output_0_split_2',
@@ -325,7 +326,7 @@ general purpose
  'inception_4b/5x5',
  'inception_4b/pool',
  'inception_4b/pool_proj',
- 'inception_4b/output',
+ 'inception_4b/output', weird wobbly eyes w nodes http://i.imgur.com/uM5eSpj.gifv
  'inception_4b/output_inception_4b/output_0_split_0',
  'inception_4b/output_inception_4b/output_0_split_1',
  'inception_4b/output_inception_4b/output_0_split_2',
@@ -337,7 +338,7 @@ general purpose
  'inception_4c/5x5',
  'inception_4c/pool',
  'inception_4c/pool_proj',
- 'inception_4c/output',
+ 'inception_4c/output', insectoid stuff! http://i.imgur.com/qr85JFT.gifv
  'inception_4c/output_inception_4c/output_0_split_0',
  'inception_4c/output_inception_4c/output_0_split_1',
  'inception_4c/output_inception_4c/output_0_split_2',
@@ -349,7 +350,7 @@ general purpose
  'inception_4d/5x5',
  'inception_4d/pool',
  'inception_4d/pool_proj',
- 'inception_4d/output',
+ 'inception_4d/output', more primary insects http://i.imgur.com/SMEGfXd.gifv
  'inception_4d/output_inception_4d/output_0_split_0',
  'inception_4d/output_inception_4d/output_0_split_1',
  'inception_4d/output_inception_4d/output_0_split_2',
@@ -361,7 +362,7 @@ general purpose
  'inception_4e/5x5',
  'inception_4e/pool',
  'inception_4e/pool_proj',
- 'inception_4e/output',
+ 'inception_4e/output', extended fractals http://i.imgur.com/BMcZVO1.gifv
  'pool4/3x3_s2',
  'pool4/3x3_s2_pool4/3x3_s2_0_split_0',
  'pool4/3x3_s2_pool4/3x3_s2_0_split_1',
@@ -374,7 +375,7 @@ general purpose
  'inception_5a/5x5',
  'inception_5a/pool',
  'inception_5a/pool_proj',
- 'inception_5a/output',
+ 'inception_5a/output', weird shit http://i.imgur.com/PlNpf1g.gifv
  'inception_5a/output_inception_5a/output_0_split_0',
  'inception_5a/output_inception_5a/output_0_split_1',
  'inception_5a/output_inception_5a/output_0_split_2',
@@ -386,7 +387,7 @@ general purpose
  'inception_5b/5x5',
  'inception_5b/pool',
  'inception_5b/pool_proj',
- 'inception_5b/output',
+ 'inception_5b/output', weird http://i.imgur.com/r8HVPdS.gifv
  'pool5/7x7_s1',
  'loss3/classifier',
  'prob'
